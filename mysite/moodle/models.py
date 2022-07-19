@@ -26,7 +26,7 @@ class Profile(models.Model):
 
 class Course(models.Model):
 	course = models.ForeignKey(Profile, on_delete = models.CASCADE)
-	course_code = models.CharField(max_length=100, default='')
+	course_code = models.CharField(max_length=101, default='')
 	user_list = models.JSONField(default=dict)
 	user_names = models.CharField(max_length=100000,default='',blank=True)
 	roles = models.CharField(max_length=100000,default='',blank=True)
